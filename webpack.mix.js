@@ -11,8 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js('resources/js/vue/client.js', 'public/js/vue')
     .vue()
+    .sass('resources/sass/clients/app.scss', 'public/css/client.css')
     .sass('resources/sass/app.scss', 'public/css');
 mix.copy('node_modules/@coreui/coreui/dist/js/coreui.bundle.min.js', 'public/js');
 mix.copy('node_modules/@coreui/icons/fonts', 'public/fonts');
