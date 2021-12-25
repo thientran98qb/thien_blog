@@ -1,0 +1,39 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .subscribe {
+        max-width: 40%;
+        @include maxWidth(768px) {
+            max-width: 100%;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        p {
+            color: gray;
+        }
+    }
+    &-form {
+        display: flex;
+        input[type="email"] {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #ced4da;
+            &:focus {
+                border-color: #2f89fc;
+                box-shadow: none!important;
+                outline: none;
+            }
+        }
+        button {
+            background: #0974fb;
+            border: none;
+            color: #fff;
+            padding: 0 20px;
+        }
+    }
+}

@@ -11,5 +11,7 @@
 <body>
     @include('clients.includes.header')
     @yield('content')
+    @include('clients.includes.footer')
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

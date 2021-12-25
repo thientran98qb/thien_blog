@@ -5,6 +5,10 @@ body {
     color: #000;
     padding: 0;
     margin: 0;
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 1.6rem;
+    background-color: #fff;
 }
 html {
     font-size: 62.5%;
@@ -13,6 +17,10 @@ html {
 a {
     color: #000;
     text-decoration: none;
+}
+p {
+    padding: 0;
+    margin: 0;
 }
 img {
     vertical-align: middle;
@@ -58,6 +66,18 @@ ul {
             width: 33.33333333%;
         }
     }
+    .col-md-5 {
+        @include minWidth(768px) {
+            flex: 0 0 auto;
+            width: 41.6666666667%;
+        }
+    }
+    .col-md-7 {
+        @include minWidth(768px) {
+            flex: 0 0 auto;
+            width: 58.3333333333%;
+        }
+    }
     .col-4 {
         flex: 0 0 auto;
         width: 33.33333333%;
@@ -68,6 +88,9 @@ ul {
 }
 .mb-30 {
     margin-bottom: 30px;
+}
+.mb-50 {
+    margin-bottom: 50px;
 }
 .bg-danger {
     background-color: #f23a2e!important;
@@ -106,11 +129,146 @@ ul {
     gap: 0 10px;
     .tag {
         display: inline-block;
-        padding: 4px 13px;
+        padding: 2px 13px;
         border-radius: 4px;
         color: #fff;
         text-transform: uppercase;
         font-size: 1.2rem;
         font-weight: 500;
     }
+}
+.site-section {
+    padding: 8rem 0;
+}
+.pagination-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .pagination {
+        display: flex;
+        align-items: center;
+        color: #a2a9ce;
+        .nav {
+            font-size: 14px;
+            padding: 5px 12px;
+            &:hover {
+                background-color: #e9ebf5;
+            }
+        }
+        a {
+            color: #76777f;
+            display: block;
+            border-radius: 4px;
+            padding: 3px 12px;
+            &.active {
+                background-color: #698aff;
+                color: #fff;
+            }
+            &:hover {
+                background-color: #698aff;
+                color: #fff;
+            }
+        }
+        &__back {
+            margin-right: 10px;
+        }
+        &__next {
+            margin-left: 5px;
+        }
+    }
+}
+.pt-50 {
+    padding-top: 5rem;
+}
+.border-top {
+    border-top: 1px solid #edf0f5 !important;
+}
+.mb-4 {
+    margin-bottom: 2.4rem!important;
+}
+.gradient {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+    }
+}
+.posts-item {
+    &-link {
+        display: block;
+        position: relative;
+        border-radius: 4px;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .height-lg {
+        height: 100%;
+    }
+    &__text {
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        h2 {
+            color: #fff;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        &--date {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.4rem;
+        }
+    }
+}
+.v-height {
+    height: 300px;
+}
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    @include maxWidth(768px) {
+        flex-direction: column;
+    }
+    .posts-item {
+        height: 100%;
+        width: calc(50% - 15px);
+        @include maxWidth(768px) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
+.category-section {
+    .tags {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+.order-md-2 {
+    @include minWidth(768px) {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+.img-1 {
+    @include maxWidth(768px) {
+        height: 400px !important;
+        margin-bottom: 30px;
+    }
+}
+.text-center {
+    text-align: center;
+}
+.text-danger {
+    color: #f23a2e!important;
+}
+.d-none {
+    display: none !important;
 }

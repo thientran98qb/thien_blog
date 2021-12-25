@@ -3,6 +3,10 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 0 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+    background: #fff;
     align-items: center;
     &__logo {
         font-size: 2.3rem;
@@ -22,6 +26,52 @@
                     transition: color 0.25s ease-in-out;
                     &:hover {
                         color: $color-link-hover;
+                    }
+                }
+            }
+            @include maxWidth(768px) {
+                display: none;
+            }
+        }
+        .toggle {
+            @include minWidth(768px) {
+                display: none;
+            }
+        }
+    }
+    &-mobile {
+        width: 200px;
+        padding: 20px;
+        position: fixed;
+        z-index: 9999999;
+        top: 0;
+        background: #fff;
+        right: -200px;
+        height: 100vh;
+        transition: 0.75s;
+        &__header {
+            .close-toggle {
+                display: flex;
+                justify-content: flex-end;
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__body {
+            &--lists {
+                padding-left: 0;
+                li {
+                    a {
+                        display: block;
+                        padding: 10px 0;
+                        color: #212529;
+                        font-size: 17px;
+                        letter-spacing: 1px;
+                        transition: .3s all ease;
+                        &:hover {
+                            color: #2f89fc;
+                        }
                     }
                 }
             }

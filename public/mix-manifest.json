@@ -1,7 +1,8 @@
 {
     "/js/vue/client.js": "/js/vue/client.js",
-    "/css/app.css": "/css/app.css",
+    "/js/app.js": "/js/app.js",
     "/css/client.css": "/css/client.css",
+    "/css/app.css": "/css/app.css",
     "/js/coreui.bundle.min.js": "/js/coreui.bundle.min.js",
     "/fonts/CoreUI-Icons-Brand.eot": "/fonts/CoreUI-Icons-Brand.eot",
     "/fonts/CoreUI-Icons-Brand.svg": "/fonts/CoreUI-Icons-Brand.svg",

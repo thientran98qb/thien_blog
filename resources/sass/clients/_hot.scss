@@ -1,45 +1,7 @@
 .hot-section {
     .posts-item {
-        &-link {
-            display: block;
-            position: relative;
-            border-radius: 4px;
-            background-position: center center;
-            background-size: cover;
-            overflow: hidden;
-        }
         .height-sm {
             height: 200px;
-        }
-        .height-lg {
-            height: 100%;
-        }
-        &__text {
-            position: absolute;
-            bottom: 0;
-            padding: 20px;
-            h2 {
-                color: #fff;
-                font-size: 1.6rem;
-                line-height: 1.5;
-                font-weight: 300;
-            }
-            &--date {
-                color: rgba(255, 255, 255, 0.5);
-                font-size: 1.4rem;
-            }
-        }
-        .gradient {
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                top: 0;
-                left: 0;
-                right: 0;
-                background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
-            }
         }
     }
 }

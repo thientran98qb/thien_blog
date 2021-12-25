@@ -1,0 +1,44 @@
+.footer {
+    background-color: #333;
+    padding: 90px 0;
+    color: #fff;
+    @include maxWidth(768px) {
+        padding: 50px 0;
+    }
+    h3 {
+        margin: 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+    p {
+        color: #737373;
+    }
+    .categories {
+        display: flex;
+        align-items: center;
+        margin-left: 90px;
+        @include maxWidth(768px) {
+            margin-left: 0;
+            padding: 20px 0;
+        }
+        &-left {
+            @include maxWidth(768px) {
+               padding-left: 0;
+            }
+        }
+    }
+    a {
+        color: #999;
+    }
+    ul {
+        margin: 0;
+    }
+    .socials {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        padding: 0;
+    }
+}
