@@ -19,24 +19,20 @@
                                 <label class="custom-control-label" for="checkAll">&nbsp</label>
                             </div>
                         </th>
-                        <th class="no-sort">Tên nhân sự</th>
-                        <th class="no-sort">Email</th>
-                        <th class="no-sort">Số điện thoại</th>
-                        <th class="no-sort">Ngày tạo</th>
+                        <th class="no-sort">sadsad)</th>
+                        <th class="no-sort" width="15%">das21</th>
+                        <th class="no-sort" width="15%">sdasd123</th>
+                        <th class="no-sort" width="15%">214412</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user)
                     <tr>
-                        <td>
-                            <input type="checkbox" name="" id="">
-                        </td>
-                        <td>{{ $user->name }}</td>
-                        <td>{{ $user->email }}</td>
-                        <td>{{ $user->phone_number }}</td>
-                        <td>{{ \Common::formatDate($user->created_at) }}</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
                     </tr>
-                    @endforeach
                 </tbody>
             </table>
         </div>

@@ -4,3 +4,62 @@
     will-change: auto;
     @include transition(padding .15s);
 }
+ol, ul, dl {
+    margin-bottom: 0 !important;
+}
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .breadcrumb {
+        flex-grow: 1;
+        &-icon {
+            vertical-align: middle;
+            font-size: 15px;
+        }
+    }
+    &-buttons {
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        padding: 0.5rem 0;
+        a,
+        span {
+            padding: 0.5rem 0.75rem;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        .label-normal {
+            background-color: $link_color;
+            color: $text_white_color;
+            border-radius: 5px;
+            margin: 0 0.75rem;
+        }
+        .btn {
+            font-weight: 600;
+            font-size: 13px;
+        }
+    }
+}
+.c-subheader {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 48px;
+    &-custom {
+        padding: 1rem 2rem;
+    }
+}
+
+.btn-normal {
+    background-color: $link_color;
+    color: $text_white_color;
+    &:hover,
+    &:focus {
+        background-color: $text_white_color;
+        color: $link_color;
+        border-color: $link_color;
+    }
+}

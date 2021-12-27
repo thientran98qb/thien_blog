@@ -7,9 +7,7 @@
             COREUI
         </a>
         <ul class="header-nav d-none d-md-flex">
-            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+
         </ul>
         <ul class="header-nav ms-auto">
 
@@ -25,7 +23,7 @@
                     </div>
                     <a class="dropdown-item" href="#">
                         @auth
-                            {{ auth()->guard('admin')->user()->name }}
+                        {{ auth()->guard('admin')->user()->name }}
                         @endauth
                     </a>
                     <div class="dropdown-divider"></div>
@@ -37,14 +35,6 @@
         </ul>
     </div>
     <div class="header-divider"></div>
-    <div class="container-fluid">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb my-0 ms-2">
-                <li class="breadcrumb-item">
-                    <span>Home</span>
-                </li>
-                <li class="breadcrumb-item active"><span>Dashboard</span></li>
-            </ol>
-        </nav>
-    </div>
+
+    {!! Breadcrumbs::render() !!}
 </header>
