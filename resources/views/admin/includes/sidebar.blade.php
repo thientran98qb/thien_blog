@@ -15,9 +15,9 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="{{ route('admin.user.index') }}">
                 <i class="nav-icon fas fa-user"></i>
-                Charts
+                Users
             </a>
         </li>
     </ul>

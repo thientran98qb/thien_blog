@@ -23,6 +23,11 @@
                     <div class="dropdown-header bg-light py-2">
                         <div class="fw-semibold">Account</div>
                     </div>
+                    <a class="dropdown-item" href="#">
+                        @auth
+                            {{ auth()->guard('admin')->user()->name }}
+                        @endauth
+                    </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">
                         Logout
