@@ -29,7 +29,8 @@
                     @foreach ($users as $user)
                     <tr>
                         <td>
-                            <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="" id="user_id_{{ $user->id }}" value="{{ $user->id }}" disabled>
+                            <label for="user_id_{{ $user->id }}">&nbsp</label>
                         </td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
@@ -43,3 +44,11 @@
     </div>
 </div>
 @endsection
+@push('js')
+<script>
+    $(document).ready(function() {
+        $('.datatable').DataTable();
+    });
+
+</script>
+@endpush
