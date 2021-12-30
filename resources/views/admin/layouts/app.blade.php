@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('css/brand.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/flag.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    {{-- Data table  --}}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="{{ asset('fonts/CoreUI-Icons-Free.svg') }}">
     @stack('css')
 </head>
@@ -35,6 +37,7 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/normalize-whitespace/prism-normalize-whitespace.js">
     </script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     @stack('js')
 </body>
 

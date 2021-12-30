@@ -3,10 +3,21 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\Admin\UserRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+    /**
+     * @var $userRepository
+     */
+    protected $userRepository;
+
+    public function __construct()
+    {
+        $this->userRepository = app(UserRepository::class);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +25,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+        $users = $this->userRepository->all();
+
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -24,7 +37,13 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        $json = Storage::disk('local')->get('province.json');
+        $json = json_decode($json, true);
+        $provinces = array_map(function ($el) {
+            return $el['name'];
+        }, $json);
+
+        return view('admin.users.create', compact('provinces'));
     }
 
     /**
