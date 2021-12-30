@@ -9,7 +9,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="card card-table border-0 mb-4 mt-4">
-        <div class="card-body border-0 px-4 pt-0 datatable-wrapper">
+        <div class="card-body border-0 px-4 p-3 datatable-wrapper">
             <table class="table table-no-border table-responsive-sm datatable" width="100%" cellspacing="0">
                 <thead>
                     <tr>

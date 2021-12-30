@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Repositories\Admin\UserRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -36,8 +37,13 @@ class UserController extends Controller
      */
     public function create()
     {
+        $json = Storage::disk('local')->get('province.json');
+        $json = json_decode($json, true);
+        $provinces = array_map(function ($el) {
+            return $el['name'];
+        }, $json);
         
-        return view('admin.users.create');
+        return view('admin.users.create', compact('provinces'));
     }
 
     /**
