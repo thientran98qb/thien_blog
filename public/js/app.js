@@ -13301,6 +13301,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
+var __webpack_exports__ = {};
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
@@ -13318,6 +13319,18 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.toggle').on('click', function ()
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.close-toggle').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.navbar-mobile').css('right', '-200px');
 });
+})();
+
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+(() => {
+/*!******************************************!*\
+  !*** ./resources/js/admin/datatables.js ***!
+  \******************************************/
+(function ($) {
+  var init = function init(element, option) {
+    $(element).dataTable({});
+  };
+})(jQuery);
 })();
 
 /******/ })()

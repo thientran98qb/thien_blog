@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +22,8 @@ Route::group(['middleware' => 'auth:admin', 'as' => 'admin.'] , function () {
     Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 
     Route::resource('user', '\App\Http\Controllers\Admin\UserController');
+    Route::group(['prefix' => 'post', 'as' => 'post.'], function () {
+        Route::get('/', [PostController::class, 'index'])->name('index');
+        Route::get('/edit/{post}', [PostController::class, 'edit'])->name('edit');
+    });
 });

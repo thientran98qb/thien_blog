@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     {{-- Data table  --}}
     <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="{{ asset('fonts/CoreUI-Icons-Free.svg') }}">
     @stack('css')
 </head>

@@ -15660,3 +15660,107 @@ ol, ul, dl {
   color: #c70040;
   border-color: #c70040;
 }
+
+.datatable-wrapper .dataTables_filter {
+  display: none;
+}
+.datatable-wrapper .dataTables_wrapper .dataTables__bottom {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.datatable-wrapper .dataTables_info {
+  padding-top: 0 !important;
+}
+.datatable-wrapper .dataTables_length label {
+  margin-bottom: 0;
+}
+.datatable-wrapper .dataTables_length select {
+  min-width: 60px;
+  margin-left: 0.5rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.datatable-wrapper .dataTables_length select::-ms-expand {
+  display: none;
+}
+.datatable-wrapper .dataTables_paginate {
+  padding: 0 2rem;
+}
+.datatable-wrapper .dataTables_paginate .paginate_button {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  color: #3c4b64;
+  font-weight: 600;
+  font-size: 12px;
+  border-right: none;
+  border-color: #f5f5f8;
+}
+.datatable-wrapper .dataTables_paginate .paginate_button.current {
+  background: #c70040 !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+.datatable-wrapper .dataTables_paginate .paginate_button.previous, .datatable-wrapper .dataTables_paginate .paginate_button.next {
+  font-weight: bold;
+  font-size: 10px;
+}
+.datatable-wrapper .dataTables_paginate .paginate_button:hover {
+  background: #c70040 !important;
+  border-color: transparent !important;
+}
+.datatable-wrapper .dataTables__bottom {
+  margin-top: 1rem;
+}
+.datatable-wrapper .no-sort {
+  cursor: default !important;
+}
+.datatable-wrapper .no-sort::after, .datatable-wrapper .no-sort::before {
+  display: none !important;
+}
+.datatable-wrapper .no-sort.sorting_asc::after, .datatable-wrapper .no-sort.sorting_asc::before {
+  display: none;
+}
+
+.table-no-border thead tr {
+  background-color: #f5f5f5;
+}
+.table-no-border thead tr th {
+  border: none;
+}
+.table-no-border thead tr th:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.table-no-border thead tr th:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.table-no-border tbody td {
+  border: none;
+  padding: 1rem 0.75rem;
+}
+.table-no-border.table-td-top tbody td {
+  vertical-align: top !important;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+.table thead tr th {
+  border: none !important;
+}
+
+table.dataTable.no-footer {
+  border: none !important;
+}
+
+.paging_full_numbers a.current {
+  color: #fff !important;
+}
