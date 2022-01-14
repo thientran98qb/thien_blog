@@ -38,9 +38,14 @@ class UserController extends Controller
      */
     public function create()
     {
-        $json = Storage::disk('local')->get('province.json');
-        $json = json_decode($json, true);
-        $provinces = collect($json)->pluck(['name']);
+        $path = config_path('province.json');
+
+        $locals = json_decode(file_get_contents($path), true);
+
+        $provinces = array_column($locals, 'name', 'id');
+        $districts = array_column($locals[1]['districts'], 'name', 'id');
+        $wards = array_column($locals[1]['districts'][0]['wards'], 'name', 'id');
+
 
         return view('admin.users.create', compact('provinces'));
     }
