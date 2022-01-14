@@ -13,7 +13,7 @@
             <table class="table table-no-border table-responsive-sm datatable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th width="50" class="no-sort">
+                        <th class="no-sort" width="50">
                             <div class="custom-control custom-checkbox mb-0">
                                 <input type="checkbox" class="custom-control-input" id="checkAll">
                                 <label class="custom-control-label" for="checkAll">&nbsp</label>
@@ -47,8 +47,29 @@
 @push('js')
 <script>
     $(document).ready(function() {
-        $('.datatable').DataTable();
-    });
+        $('.datatable').DataTable({
+            order: []
+            , pagingType: "full_numbers"
+            , dom: '<"top">Bfrt<"dataTables__bottom"fipl><"clear">'
+            , columnDefs: [{
+                orderable: false
+                , targets: 'no-sort'
+            }, {
+                searchable: false
+            }]
+            , language: {
+                sLengthMenu: "Hiển thị _MENU_"
+                , sInfo: "<b>_TOTAL_</b> kết quả"
+                , sInfoPostFix: ""
+                , oPaginate: {
+                    sFirst: '<span class="lnr lnr-chevron-left"></span><span class="lnr lnr-chevron-left"></span> '
+                    , sPrevious: '<span class="lnr lnr-chevron-left"></span>'
+                    , sNext: '<span class="lnr lnr-chevron-right"></span>'
+                    , sLast: '<span class="lnr lnr-chevron-right"></span><span class="lnr lnr-chevron-right"></span>'
+                }
+            }
+        });
+    })
 
 </script>
 @endpush

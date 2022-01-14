@@ -11,4 +11,9 @@ class UserRepository extends BaseRepository
     {
         return User::class;
     }
+
+    public function getUserActive()
+    {
+        return $this->model->active()->get();
+    }
 }

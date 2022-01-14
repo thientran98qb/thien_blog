@@ -54,4 +54,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'active' => 'boolean'
     ];
+
+    public function scopeActive($query)
+    {
+        return $query->where('active', 0);
+    }
 }
