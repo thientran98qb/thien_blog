@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\UserStoreRequest;
 use App\Repositories\Admin\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -25,7 +26,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = $this->userRepository->all();
+        $users = $this->userRepository->getUserActive();
 
         return view('admin.users.index', compact('users'));
     }
@@ -39,9 +40,7 @@ class UserController extends Controller
     {
         $json = Storage::disk('local')->get('province.json');
         $json = json_decode($json, true);
-        $provinces = array_map(function ($el) {
-            return $el['name'];
-        }, $json);
+        $provinces = collect($json)->pluck(['name']);
         
         return view('admin.users.create', compact('provinces'));
     }
@@ -52,9 +51,9 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserStoreRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
